@@ -1,0 +1,47 @@
+<h2>{{ title }}</h2>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
+<img [src]="imageUrl" />
+<br />
+<button class="btn btn-primary" [class.active]="isActive">Save</button>
+<button [style.background]="isActive ? 'blue' : 'white'">Save</button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td [attr.colspan]="colSpan">Liam</td>
+  </tr>
+</table>
+<div (click)="onDivClicked()">
+  <button (click)="onSave($event)">Click me</button>
+</div>
+
+<span></span>
+
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+<br />
+<!--These are called pipes and are used for formatting data-->
+{{ course.title | uppercase }} <br />
+{{ course.students | number }} <br />
+{{ course.rating | number : "1.1-1" }} <br />
+{{ course.price | currency : "CHF" }} <br />
+{{ course.releaseDate | date : "shortDate" }} <br />
+
+{{ text | summary : 10 }}
+
+<!--
+// you can find all by searching dom style object properties
+
+// attr.colspan is needed because the html "td" does not know colspan
+// with attr. we define it as an attribute
+// colspan would now take up 2 field of a column for example age and name
+
+// with curly braces it is string interpolation
+// with square brackets it is property binding
+//       <img src="{{ imageUrl }}" />
+-->

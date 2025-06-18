@@ -1,0 +1,11 @@
+td {
+  border-color: red;
+  border-width: 4px;
+  border-style: solid;
+}
+
+th {
+  border-color: green;
+  border-width: 4px;
+  border-style: solid;
+}

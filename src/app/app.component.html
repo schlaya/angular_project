@@ -1,4 +1,7 @@
-<h1>Angular</h1>
+<h1>Liam's Playspace</h1>
 <!--Here you will have to insert the things you wanna display-->
-<favorites></favorites>
+<favorites
+  [isFavorite]="post.isFavorite"
+  (change)="onFavoriteChanged($event)"
+></favorites>
 <titles></titles>

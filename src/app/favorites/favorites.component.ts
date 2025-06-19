@@ -1,14 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean;
+}
 
 @Component({
   selector: 'favorites',
   standalone: false,
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css'],
+  styles: [
+    `
+      div {
+        color: green;
+      }
+    `,
+  ],
+
+  //inputs: ['isFavorite'],
 })
 export class FavoritesComponent {
-  isClicked = false;
+  // the string between the parentheses is an alias
+  @Input('isFavorite') isSelected: boolean = false;
+  @Output('change') click = new EventEmitter();
   starEmpty: SafeHtml;
   starFull: SafeHtml;
 
@@ -28,6 +43,8 @@ export class FavoritesComponent {
   }
 
   onStarClick() {
-    this.isClicked = !this.isClicked;
+    this.isSelected = !this.isSelected;
+    // .emit notifies others, that something has happened
+    this.click.emit({ newValue: this.isSelected });
   }
 }

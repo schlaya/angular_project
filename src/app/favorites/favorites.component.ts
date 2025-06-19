@@ -1,4 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface FavoriteChangedEventArgs {
@@ -10,14 +15,6 @@ export interface FavoriteChangedEventArgs {
   standalone: false,
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.css'],
-  styles: [
-    `
-      div {
-        color: green;
-      }
-    `,
-  ],
-
   //inputs: ['isFavorite'],
 })
 export class FavoritesComponent {

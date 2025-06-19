@@ -1,0 +1,7 @@
+<ul>
+  <!--list of all exported values can be found under
+    ngForOf on angular.io under local variables-->
+  <li *ngFor="let course of courses; even as isEven">
+    {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+  </li>
+</ul>

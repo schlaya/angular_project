@@ -11,6 +11,11 @@ import { SummaryPipe } from './summary.pipe';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { TitlesComponent } from './titles/titles.component';
 import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikesComponent } from './likes/likes.component';
+import { HiddenDisplaysComponent } from './hidden-displays/hidden-displays.component';
+import { SwitchCaseComponent } from './switch-case/switch-case.component';
+import { ForLoopComponent } from './for-loop/for-loop.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,11 @@ import { TitleCasePipe } from './title-case.pipe';
     FavoritesComponent,
     TitlesComponent,
     TitleCasePipe,
+    PanelComponent,
+    LikesComponent,
+    HiddenDisplaysComponent,
+    SwitchCaseComponent,
+    ForLoopComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorService],

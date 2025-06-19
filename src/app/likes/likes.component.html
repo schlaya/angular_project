@@ -1,0 +1,7 @@
+<div
+  (click)="onLike()"
+  [innerHTML]="heart"
+  [style.color]="isLiked ? 'deeppink' : '#ccc'"
+  style="cursor: pointer"
+></div>
+<div [innerHTML]="likes" (click)="onLike()"></div>

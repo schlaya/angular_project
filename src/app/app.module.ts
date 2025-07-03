@@ -16,6 +16,8 @@ import { LikesComponent } from './likes/likes.component';
 import { HiddenDisplaysComponent } from './hidden-displays/hidden-displays.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { ForLoopComponent } from './for-loop/for-loop.component';
+import { AddComponent } from './change-detection/add.component';
+import { TrackByComponent } from './track-by/track-by.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ForLoopComponent } from './for-loop/for-loop.component';
     HiddenDisplaysComponent,
     SwitchCaseComponent,
     ForLoopComponent,
+    AddComponent,
+    TrackByComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorService],

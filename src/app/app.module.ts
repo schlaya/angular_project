@@ -18,6 +18,7 @@ import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { ForLoopComponent } from './for-loop/for-loop.component';
 import { AddComponent } from './change-detection/add.component';
 import { TrackByComponent } from './track-by/track-by.component';
+import { CanSaveComponent } from './can-save/can-save.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TrackByComponent } from './track-by/track-by.component';
     ForLoopComponent,
     AddComponent,
     TrackByComponent,
+    CanSaveComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorService],

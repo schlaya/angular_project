@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class SafeTraversalComponent {
   task = {
     title: 'Review applications',
-    assignee: null
+    assignee: {
+      name: 'Liam'
+    }
   }
 }

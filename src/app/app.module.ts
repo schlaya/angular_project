@@ -19,6 +19,7 @@ import { ForLoopComponent } from './for-loop/for-loop.component';
 import { AddComponent } from './change-detection/add.component';
 import { TrackByComponent } from './track-by/track-by.component';
 import { CanSaveComponent } from './can-save/can-save.component';
+import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CanSaveComponent } from './can-save/can-save.component';
     AddComponent,
     TrackByComponent,
     CanSaveComponent,
+    SafeTraversalComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorService],
